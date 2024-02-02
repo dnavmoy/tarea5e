@@ -6,6 +6,7 @@ package daw;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Objects;
 import java.util.Set;
 
@@ -96,4 +97,18 @@ public class Vaqueria {
     public void bajaVaca(Vaca baja){
         this.vaqueria.remove(baja);
     }
+    public void mostrarVaqueria(){
+        for(Vaca vaca:vaqueria){
+            System.out.println(vaca);
+        }
+    }
+    
+    public void mostrarVaqueriaV2(){
+        Iterator<Vaca> iterador=vaqueria.iterator();
+        while(iterador.hasNext()){
+            System.out.println(iterador.next());
+            
+        }
+    }
+    
 }

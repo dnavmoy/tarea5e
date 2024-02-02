@@ -52,7 +52,25 @@ public class Tarea5eDanielNavarro {
             
         }
         
+        //7. mostrar vaqueria
+        System.out.println("mostrar vaqueria");
+        primera.mostrarVaqueria();
+        
+        //7.mostrar vaqeuriav2
+        System.out.println("mostrar vaqueria v2");
+        primera.mostrarVaqueriaV2();
         //parteB
+
+
+        System.out.println("---- vaqueria segunda");
+        VaqueriaOrdenada segunda = new VaqueriaOrdenada();
+        segunda.getVaqueria().add(new Vaca("3", LocalDate.of(2020, 02, 10), "marron"));
+        segunda.getVaqueria().add(new Vaca("1", LocalDate.of(2024, 01, 01), "negra"));
+        segunda.getVaqueria().add(new Vaca("2", LocalDate.of(2018, 07, 21), "blanca con manchas"));
+        
+        segunda.mostrarVaqueria();
+        
+        
         
     }
 }

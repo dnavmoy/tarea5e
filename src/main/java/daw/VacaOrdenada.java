@@ -11,13 +11,13 @@ import java.util.Objects;
  *
  * @author daniel
  */
-public class Vaca implements Comparable<Vaca>{
+public class VacaOrdenada implements Comparable<Vaca>{
     
     private String Id;
     private LocalDate fechaNacimiento;
     private String descripcion;
 
-    public Vaca(String Id, LocalDate fechaNacimiento, String descripcion) {
+    public VacaOrdenada(String Id, LocalDate fechaNacimiento, String descripcion) {
         this.Id = Id;
         this.fechaNacimiento = fechaNacimiento;
         this.descripcion = descripcion;
@@ -67,7 +67,7 @@ public class Vaca implements Comparable<Vaca>{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Vaca other = (Vaca) obj;
+        final VacaOrdenada other = (VacaOrdenada) obj;
         if (!Objects.equals(this.Id, other.Id)) {
             return false;
         }
@@ -90,10 +90,13 @@ public class Vaca implements Comparable<Vaca>{
 
     @Override
     public int compareTo(Vaca o) {
-       
-        
-         return this.Id.compareTo(o.getId());
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    
+
+   
+    
 
 
 

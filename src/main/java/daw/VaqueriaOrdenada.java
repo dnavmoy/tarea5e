@@ -8,28 +8,30 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 /**
  *
  * @author daniel
  */
-public abstract class VaqueriaOrdenada {
+public class VaqueriaOrdenada{
     
-    private Set<Vaca> vaqueria;
+    private SortedSet<Vaca> vaqueria=new TreeSet<>();
 
-    public VaqueriaOrdenada(Set<Vaca> vaqueria) {
+    public VaqueriaOrdenada(SortedSet<Vaca> vaqueria) {
         this.vaqueria = vaqueria;
     }
     
     public VaqueriaOrdenada(){
-        this.vaqueria= new HashSet<>();
+       this.vaqueria=new TreeSet<>();
     }
 
-    public Set<Vaca> getVaqueria() {
+    public SortedSet<Vaca> getVaqueria() {
         return vaqueria;
     }
 
-    public void setVaqueria(Set<Vaca> vaqueria) {
+    public void setVaqueria(SortedSet<Vaca> vaqueria) {
         this.vaqueria = vaqueria;
     }
 
@@ -97,4 +99,14 @@ public abstract class VaqueriaOrdenada {
     public void bajaVaca(Vaca baja){
         this.vaqueria.remove(baja);
     }
+    
+     public void mostrarVaqueria(){
+        for(Vaca vaca:vaqueria){
+            System.out.println(vaca);
+        }
+    }
+
+       
+    
+    
 }
